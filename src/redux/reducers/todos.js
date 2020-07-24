@@ -20,9 +20,20 @@ export default  (state = initialState, action) => {
                   }
               }
             }
-        case TOGGLE_TODO:
-            return state
+        case TOGGLE_TODO:{
+            const { id } = action.payload;
+            return {
+                ...state,
+                byIds:{
+                    ...state.byIds,
+                    [id]:{
+                        ...state.byIds[id],
+                        completed:!state.byIds[id].completed
+                    }
+                }
+            }
+        }      
         default:
-            return state
+            return state;
     }
 }

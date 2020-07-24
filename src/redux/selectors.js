@@ -9,7 +9,7 @@ export const getTodoById = (store, id) => getTodoState(store) ? {...getTodoState
 // 
 
 export const getTodos = store =>{
-    getTodoList(store).map(id => getTodoById(store,id));
+    return getTodoList(store).map(id => getTodoById(store,id));
 }
 
 export const getTodosByVisibilityFilter = (store, visibilityFilter) =>{

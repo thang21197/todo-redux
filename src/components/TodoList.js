@@ -15,7 +15,7 @@ function TodoList(props) {
     const visibilityFilter  = useSelector(state => state.visibilityFilter);
     const state  = useSelector(state => state);
     const todos = getTodosByVisibilityFilter(state,visibilityFilter);
-    console.log(todos);
+    // console.log(todos);
     return (
         <ul className="todo-list">
             {todos && todos.length ? todos.map((todo,index)=>{
